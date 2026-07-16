@@ -15,7 +15,7 @@ Code → Download ZIP
 也可以使用 Git 克隆项目：
 
 ```bash
-git clone <你的 GitHub 项目地址>
+git clone https://github.com/Guancraft/SmoothType
 ```
 
 ### 2. 打开扩展管理页面
