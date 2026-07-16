@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "SmoothType 丝滑打字",
+  "version": "1.3.0",
+  "description": "为网页输入框添加类似 Word 的平滑光标移动动画，修复空富文本输入框首次提交中文后光标飞到行尾的问题。",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_title": "SmoothType 丝滑打字",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    }
+  ]
+}

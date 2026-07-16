@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmoothType 丝滑打字</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="panel">
+    <header class="hero">
+      <div class="logo" aria-hidden="true">S</div>
+      <div>
+        <h1>SmoothType</h1>
+        <p>Word 风格平滑光标</p>
+      </div>
+    </header>
+
+    <section class="card primary-card">
+      <div class="row">
+        <div>
+          <strong>全局启用</strong>
+          <span>在支持的网页输入框中生效</span>
+        </div>
+        <label class="switch">
+          <input id="enabled" type="checkbox">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="row site-row">
+        <div>
+          <strong>当前网站</strong>
+          <span id="siteName">正在识别…</span>
+        </div>
+        <label class="switch">
+          <input id="siteEnabled" type="checkbox">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <strong>手感预设</strong>
+      </div>
+      <div class="presets">
+        <button type="button" data-duration="48">快速</button>
+        <button type="button" data-duration="72" class="selected">Word</button>
+        <button type="button" data-duration="110">柔和</button>
+      </div>
+    </section>
+
+    <section class="card controls">
+      <label>
+        <div class="label-row">
+          <span>移动时间</span>
+          <output id="durationValue">72 ms</output>
+        </div>
+        <input id="duration" type="range" min="25" max="160" step="1">
+      </label>
+
+      <label>
+        <div class="label-row">
+          <span>光标宽度</span>
+          <output id="widthValue">1.5 px</output>
+        </div>
+        <input id="caretWidth" type="range" min="1" max="4" step="0.5">
+      </label>
+
+      <label>
+        <div class="label-row">
+          <span>闪烁周期</span>
+          <output id="blinkValue">530 ms</output>
+        </div>
+        <input id="blinkInterval" type="range" min="300" max="1000" step="10">
+      </label>
+    </section>
+
+    <p class="hint">
+      修改设置后会立即生效。刚安装时，请刷新已经打开的网页。
+    </p>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>
